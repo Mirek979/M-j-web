@@ -1,0 +1,16 @@
+﻿@model Můj_web.Models.Article
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<section>
+    <p>
+        Opravdu chceš článek smazat? Tento: <br>@Model.Title<br/>?
+    </p>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id"/>
+        <button type="submit" class="clanky-tlacitko">Odstranit</button>
+        <a class="clanky-tlacitko" asp-action="Index">Zpět na senam článků</a>
+    </form>
+</section>

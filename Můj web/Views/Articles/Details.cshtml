@@ -1,0 +1,12 @@
+﻿@model Můj_web.Models.Article
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<section>
+    <p>
+        @Html.Raw(Model.Content)
+    </p>
+    <a class="clanky-tlacitko" asp-action="Index">Zpět na seznam</a>
+</section>

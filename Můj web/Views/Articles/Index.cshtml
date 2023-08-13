@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Můj_web.Models.Article>
+
+@{
+    ViewData["Title"] = "Seznam článků";
+}
+<section>
+    <p>
+        <a class="clanky-tlacitko" asp-action="Create">Vytvořit nový</a>
+    </p>
+    <ul class="list-group" id=" = "clanky>
+        @foreach(var item in Model){
+            <li class="list-group-item">
+                <h2><a asp-action="Details" asp-all-route-id= "@item.Id">@item.Title</a></h2>
+                <p>
+                    @item.Description
+                </p>
+                <p>
+                    <a asp-action="Edit" asp-route-id = "@item.Id">Editovat</a>
+                    <a asp-action="Delete" asp-route-id = "@item.Id">Odstranit</a>
+                </p>
+            </li>
+        }
+    </ul>
+</section>
+
